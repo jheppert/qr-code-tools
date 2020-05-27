@@ -8,7 +8,7 @@ javascript: (function() {
         }, d.appendChild(c)
     }
     loadScript('//jheppert.github.io/qr-code-tools/remote-script.js?' + new Date().getMilliseconds(), function() {
-        editDeskArticle.init()
+        generateQRCode.init()
     });
 
 })();
