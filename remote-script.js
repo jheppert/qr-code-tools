@@ -25,7 +25,7 @@
                     var heightAdjuster = document.getElementsByClassName('sub-nav-nav')[0].offsetHeight;
                     console.log(heightAdjuster);
                     //80 + heightAdjuster
-                    codeContainer.style.top = "150px";
+                    codeContainer.style.top = (80 + heightAdjuster) + "px";
 
                     // Making the QR Code
                     var qrcode = new QRCode(codeContainer, {
