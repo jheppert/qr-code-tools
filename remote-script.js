@@ -19,6 +19,9 @@
                     console.log("in the callback function");
                     var codeContainer = document.createElement("div");
                     codeContainer.setAttribute("id", "qrcode");
+                    codeContainer.setAttribute("float", "right");
+                    codeContainer.setAttribute("top", "50px");
+                    codeContainer.setAttribute("right", "20px");
 
                     // Making the QR Code
                     var qrcode = new QRCode(codeContainer, {
