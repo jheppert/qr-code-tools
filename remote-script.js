@@ -17,15 +17,17 @@
                 j.src = '//jheppert.github.io/qr-code-tools/qrcode.js';
                 j.onload = function() {
                     console.log("in the callback function");
-                    var codeContents = document.getElementById("qrcode");
+                    var codeContainer = document.createElement("div");
+                    codeContainer.setAttribute("id", "qrcode");
 
                     // Making the QR Code
-                    var qrcode = new QRCode(codeContents, {
+                    var qrcode = new QRCode(codeContainer, {
                         width : 200,
                         height : 200
                     });
                     
                     if (codeText != "") {
+                        document.append(codeContainer);
                         qrcode.makeCode(codeText);
                     } else {
                         console.log("Didn't find a serial number");
