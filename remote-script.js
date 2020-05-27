@@ -21,6 +21,9 @@
                     codeContainer.setAttribute("id", "qrcode");
                     codeContainer.style.position = "absolute";
                     codeContainer.style.right = "20px";
+
+                    var heightAdjuster = document.getElementsByClassName('sub-nav-nav')[0].offsetHeight;
+                    //80 + heightAdjuster
                     codeContainer.style.top = "150px";
 
                     // Making the QR Code
