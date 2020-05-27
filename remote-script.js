@@ -16,16 +16,19 @@
                 var j = document.createElement('script');
                 j.src = '//jheppert.github.io/qr-code-tools/qrcode.js';
                 j.onload = function() {
-                    // console.log("in the callback function");
-                    var codeContainer = document.createElement("div");
-                    codeContainer.setAttribute("id", "qrcode");
-                    codeContainer.style.position = "absolute";
-                    codeContainer.style.right = "20px";
+                    // Everything is loaded, let's get to work
 
-                    var heightAdjuster = document.getElementsByClassName('sub-nav-nav')[0].offsetHeight;
-                    // console.log(heightAdjuster);
-                    //80 + heightAdjuster
-                    codeContainer.style.top = (80 + heightAdjuster) + "px";
+                    if (!document.getElementById("qrcode")) {
+                        var codeContainer = document.createElement("div");
+                        codeContainer.setAttribute("id", "qrcode");
+                        codeContainer.style.position = "absolute";
+                        codeContainer.style.right = "20px";
+
+                        var heightAdjuster = document.getElementsByClassName('sub-nav-nav')[0].offsetHeight;
+                        // console.log(heightAdjuster);
+                        //80 + heightAdjuster
+                        codeContainer.style.top = (80 + heightAdjuster) + "px";
+                    }
 
                     // Making the QR Code
                     var qrcode = new QRCode(codeContainer, {
