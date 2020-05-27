@@ -19,9 +19,9 @@
                     console.log("in the callback function");
                     var codeContainer = document.createElement("div");
                     codeContainer.setAttribute("id", "qrcode");
-                    // codeContainer.setAttribute("float", "right");
-                    // codeContainer.setAttribute("top", "50px");
-                    // codeContainer.setAttribute("right", "20px");
+                    codeContainer.style.position = "absolute";
+                    codeContainer.style.right = "20px";
+                    codeContainer.style.top = "150px";
 
                     // Making the QR Code
                     var qrcode = new QRCode(codeContainer, {
@@ -30,7 +30,7 @@
                     });
                     
                     if (codeText != "") {
-                        document.getElementById("content").prepend(codeContainer);
+                        document.getElementById("content").appendChild(codeContainer);
                         qrcode.makeCode(codeText);
                     } else {
                         console.log("Didn't find a serial number");
