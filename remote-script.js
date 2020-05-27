@@ -27,7 +27,7 @@
                     });
                     
                     if (codeText != "") {
-                        document.append(codeContainer);
+                        document.body.appendChild(codeContainer);
                         qrcode.makeCode(codeText);
                     } else {
                         console.log("Didn't find a serial number");
