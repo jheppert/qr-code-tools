@@ -8,17 +8,9 @@ javascript: (function() {
         }, d.appendChild(c)
     }
 
-    loadScript('//jheppert.github.io/qr-code-tools/qrcode.js?' + new Date().getMilliseconds(), function() {
-        console.log("loaded qrcode.js");
-        loadScript('//jheppert.github.io/qr-code-tools/remote-script.js?' + new Date().getMilliseconds(), function() {
-            console.log("loaded remote-script.js");
-            generateQRCode.init()
-        });
+    loadScript('//jheppert.github.io/qr-code-tools/remote-script.js?' + new Date().getMilliseconds(), function() {
+        generateQRCode.init()
     });
-
-    // loadScript('//jheppert.github.io/qr-code-tools/remote-script.js?' + new Date().getMilliseconds(), function() {
-    //     generateQRCode.init()
-    // });
 
 
 })();
