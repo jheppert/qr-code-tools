@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Desk Bookmarklet</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+</head>
+<body>
+
+    <div class="wrapper">
+        <h1>QR Code Generator for Tools</h1>
+        <p class="body-copy">Generate a QR code for use in device setup</p>
+        <h2>Installing</h2>
+        <ul class="body-copy">
+        <li>Make sure your bookmarks toolbar or sidebar is visible (usually found under your browser's View menu).</li>
+        <li>Drag the button below onto your bookmarks toolbar or sidebar.</li>
+        </ul>
+        <h2>Using</h2>
+        <p class="body-copy">After looking up a device's serial number in Tools, click this bookmarklet. A QR code will be generated that you can scan for use in device setups in the apps.</p>
+        
+        <div class="bookmark-wrapper">
+            <p class="drag-instructions">Drag this to your bookmarks bar:</p>
+            <a class="big-link" href="javascript:!function(){var e,t,a,n,o;e='//jheppert.github.io/qr-code-tools/remote-script.js?'+(new Date).getMilliseconds(),t=function(){generateQRCode.init()},a=document.createElement('script'),n=document.getElementsByTagName('head')[0],o=!1,a.type='text/javascript',a.src=e,a.onload=a.onreadystatechange=function(){o||this.readyState&&'loaded'!=this.readyState&&'complete'!=this.readyState||(o=!0,t())},n.appendChild(a)}();">QR Code Generator</a>
+        </div>
+    </div>
+
+    <style>
+        body {
+            font-family: 'Proxima Nova', 'Helvetica Neue', 'Helvetica', arial, sans-serif;
+            font-size: 17px;
+        }
+
+        h1, h2 {
+            margin-bottom: 0;
+        }
+
+        h1 {
+            /*font-family: "ProximaNova-Light";*/
+            font-weight: 300;
+            font-size: 3em;
+            color: #FF1911;
+            margin-bottom: 0.2em;
+        }
+
+        h2 {
+            font-weight: 600;
+            font-size: 1.5em;
+            margin-top: 2em;
+            margin-bottom: 0.4em;
+        }
+
+        .wrapper {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .body-copy {
+            font-size: 1.1em;
+            line-height: 120%;
+            margin-top: 0;
+        }
+
+        .bookmark-wrapper {
+            text-align: center;
+            margin-top: 4em;
+        }
+
+        .drag-instructions {
+            font-weight: bold;
+        }
+
+        .big-link {
+            display: inline-block;
+            padding: 1em 2em 0.9em 2em;
+            background-color: #00A2B8;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    </style>
+
+</body>
+</html>
