@@ -19,9 +19,9 @@
                     console.log("in the callback function");
                     var codeContainer = document.createElement("div");
                     codeContainer.setAttribute("id", "qrcode");
-                    codeContainer.setAttribute("float", "right");
-                    codeContainer.setAttribute("top", "50px");
-                    codeContainer.setAttribute("right", "20px");
+                    // codeContainer.setAttribute("float", "right");
+                    // codeContainer.setAttribute("top", "50px");
+                    // codeContainer.setAttribute("right", "20px");
 
                     // Making the QR Code
                     var qrcode = new QRCode(codeContainer, {
@@ -38,7 +38,7 @@
                     }
 
                 }
-                document.body.appendChild(j);
+                document.getElementById("content").appendChild(j);
             } else {
                 console.log('Not gonna work on this site!');
             }
