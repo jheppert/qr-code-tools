@@ -9,7 +9,7 @@
                 var codeText = "AUG:" + serialNumber;
                 console.log(codeText);
                 var j = document.createElement('script');
-                j.src = 'qrcode.js';
+                j.src = '//jheppert.github.io/qr-code-tools/qrcode.js';
                 j.onload = console.log("second script appended");
                 document.body.appendChild(j);
             } else {
