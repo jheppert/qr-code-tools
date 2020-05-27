@@ -5,11 +5,13 @@
         init: function() {
             var currentHostname = window.location.hostname;
             if(currentHostname.endsWith('august.com')) {
-                console.log('Sweet');
                 var serialNumber = document.getElementById("identifier").value;
-                console.log(serialNumber);
                 var codeText = "AUG:" + serialNumber;
                 console.log(codeText);
+                var j = document.createElement('script');
+                j.src = 'qrcode.js';
+                j.onload = console.log("second script appended");
+                document.body.appendChild(j);
             } else {
                 console.log('Not gonna work on this site!');
             }
