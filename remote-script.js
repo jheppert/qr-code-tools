@@ -23,6 +23,7 @@
                     codeContainer.style.right = "20px";
 
                     var heightAdjuster = document.getElementsByClassName('sub-nav-nav')[0].offsetHeight;
+                    console.log(heightAdjuster);
                     //80 + heightAdjuster
                     codeContainer.style.top = "150px";
 
