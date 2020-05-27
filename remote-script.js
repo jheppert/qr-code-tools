@@ -8,6 +8,8 @@
                 console.log('Sweet');
                 var serialNumber = document.getElementById("identifier").value;
                 console.log(serialNumber);
+                var codeText = "AUG:" + serialNumber;
+                console.log(codeText);
             } else {
                 console.log('Not gonna work on this site!');
             }
