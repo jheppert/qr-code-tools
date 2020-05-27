@@ -30,7 +30,7 @@
                     });
                     
                     if (codeText != "") {
-                        document.body.appendChild(codeContainer);
+                        document.getElementById("content").prepend(codeContainer);
                         qrcode.makeCode(codeText);
                     } else {
                         console.log("Didn't find a serial number");
@@ -38,7 +38,7 @@
                     }
 
                 }
-                document.getElementById("content").appendChild(j);
+                document.body.appendChild(j);
             } else {
                 console.log('Not gonna work on this site!');
             }
