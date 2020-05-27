@@ -7,8 +7,16 @@ javascript: (function() {
             e || this.readyState && 'loaded' != this.readyState && 'complete' != this.readyState || (e = !0, b())
         }, d.appendChild(c)
     }
-    loadScript('//jheppert.github.io/qr-code-tools/remote-script.js?' + new Date().getMilliseconds(), function() {
-        generateQRCode.init()
+
+    loadScript('//jheppert.github.io/qr-code-tools/qrcode.js?' + new Date().getMilliseconds(), function() {
+        loadScript('//jheppert.github.io/qr-code-tools/remote-script.js?' + new Date().getMilliseconds(), function() {
+            generateQRCode.init()
+        });
     });
+
+    // loadScript('//jheppert.github.io/qr-code-tools/remote-script.js?' + new Date().getMilliseconds(), function() {
+    //     generateQRCode.init()
+    // });
+
 
 })();
